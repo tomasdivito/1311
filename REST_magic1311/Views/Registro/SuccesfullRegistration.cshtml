@@ -1,0 +1,96 @@
+﻿@model REST_magic1311.Models.SerialModel
+@{
+    ViewBag.Title = "Succesfull Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <center>
+        <h2>Succesfull Registration of the product!</h2>
+
+    
+        Now you can download your software!
+        You can follow the install instructions in this page.
+    </center>
+        
+        <div id="howToInstallApp">
+    <center>
+        <b>
+            <h4>Installation guide</h4>
+            <p>
+                <i>-</i> <i>FOR ONE TIME ONLY </i>After you activate your product go to your cellphone and mark the option "Unknow sources" from the security settings
+                on your phone
+                <img src="~/Content/Images/unknow sources.png" />
+            </p>
+            <p>
+                <i>-</i> Go to the download link of the app that you will get after the registration of your product and install the APK in your phone
+            </p>
+            <p>
+                <i>-</i>Just introduce your already registered serial and you're ready to go!
+            </p>
+
+        </b>
+    </center>
+</div>
+
+<div>
+    <center>
+        <p>
+            <b>HOW TO INSTALL VIDEO</b>
+        </p>
+        <p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/PkQc0UkkDoo" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </p>
+    </center>
+</div>
+<center>
+    <div id="product">
+        <div class="row centered">
+            <center><h2><b>Download @Model.AppID</b></h2></center>
+            <br>
+            <center>
+                @if (Model.AppID == "ESP")
+                {
+                    <a href="~/MyApps/ESP/ESP11.apk" title="downloadESP" class="links" target="_blank">
+                        <img alt="List View" src="@Url.Content("~/Content/Images/esp11.png")">
+                        Download link
+                    </a>
+                    <p>
+                        <a href="~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf" title="downloadESPManual" class="links" target="_blank">
+                            <b>ESP MANUAL<i>(English/Spanish)</i></b>
+                        </a>
+                    </p>
+                }
+                else if (Model.AppID == "TRA")
+                {
+                    <a href="~/MyApps/TRA/TRAVEL11.apk" title="downloadESP" class="links" target="_blank">
+                        <img alt="List View" src="@Url.Content("~/Content/Images/TRAVEL11.png")">
+                        Download link
+                    </a>
+                    <p>
+                        <a href="~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf" title="downloadESPManual" class="links" target="_blank">
+                            <b>TRA MANUAL<i>(English/Spanish)</i></b>
+                        </a>
+                    </p>
+                }
+                else if (Model.AppID == "PET")
+                {
+                    <a href="~/MyApps/PET/PET11.apk" title="downloadESP" class="links" target="_blank">
+                        <img alt="List View" src="@Url.Content("~/Content/Images/pet11.png")">
+                        Download link
+                    </a>
+                    <p>
+                        <a href="~/Files/Nuevos PDF 2/PET_span_ing2.pdf" title="downloadESPManual" class="links" target="_blank">
+                            <b>PET MANUAL<i>(English/Spanish)</i></b>
+                        </a>
+                    </p>
+                }
+                <p><b>CHECK ALL YOUR APPS IN @Html.ActionLink("MY APPS", "MyRegisteredApps", "MyApps")</b></p>
+            </center>
+        </div>
+    </div>
+</center>
+
+
+@Html.ActionLink("Back to home", "Index", "Home")
+@Html.ActionLink("Register another product", "RegisterProduct", "Registro")

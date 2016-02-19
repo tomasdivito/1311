@@ -1,0 +1,90 @@
+﻿@model REST_magic1311.Models.UserModel
+@{
+  ViewBag.Title = "Validation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //test to check if we get the key from Viewbag
+    var key = ViewBag.Key;
+}
+
+<h2>Registration almost complete! Check your info</h2>
+<b>Check your email and put the code we send you to activate your account</b>
+<div>
+    <h4>Your information</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lastname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Facebook)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Facebook)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Twitter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Twitter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Linkedin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Linkedin)
+        </dd>
+
+    </dl>
+</div>
+@using (Html.BeginForm("Validation", "User"))
+{
+    @Html.ValidationSummary(true, "Login failed, check your deteails!");
+    <div>
+        <fieldset>
+            <legend>Activation code</legend>
+            <div>@Html.LabelFor(u => u.ActivationCode)</div>
+            <div>
+                @Html.TextBoxFor(u => u.ActivationCode, new { @Value = "" })
+                @Html.ValidationMessageFor(u => u.ActivationCode)
+            </div>
+            <div>
+                <input type="submit" name="SUBMIT" value="Activate" onclick="this.value='Submitting ..';this.disabled='disabled'; this.form.submit();" />
+            </div>
+        </fieldset>
+    </div>
+}

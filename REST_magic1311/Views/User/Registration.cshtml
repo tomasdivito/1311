@@ -1,0 +1,94 @@
+﻿@model REST_magic1311.Models.UserModel
+@using BotDetect.Web.UI.Mvc;
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link href="@BotDetect.Web.CaptchaUrls.Absolute.LayoutStyleSheetUrl"
+          rel="stylesheet" type="text/css" />
+</head>
+<center>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true, "Registration failed, check your fields");
+        <div>
+            <fieldset>
+                <legend>Create a new user</legend>
+
+                <div class="editor-label">
+                    @Html.LabelFor(u => u.Email)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(u => u.Email)
+                    @Html.ValidationMessageFor(u => u.Email)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(u => u.Password)
+                </div>
+                <div class="editor-field">
+                    @Html.PasswordFor(u => u.Password)
+                    @Html.ValidationMessageFor(u => u.Password)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(u => u.Name)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(u => u.Name)
+                    @Html.ValidationMessageFor(u => u.Name)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(u => u.Lastname)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(u => u.Lastname)
+                    @Html.ValidationMessageFor(u => u.Lastname)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(u => u.Country)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(u => u.Country)
+                    @Html.ValidationMessageFor(u => u.Country)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(u => u.Facebook)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(u => u.Facebook)
+                    @Html.ValidationMessageFor(u => u.Facebook)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(u => u.Twitter)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(u => u.Twitter)
+                    @Html.ValidationMessageFor(u => u.Twitter)
+                </div>
+
+                <div class="editor-label">
+                    @Html.LabelFor(u => u.Linkedin)
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(u => u.Linkedin)
+                    @Html.ValidationMessageFor(u => u.Linkedin)
+                </div>
+                <div>
+                    @{ MvcCaptcha sampleCaptcha = new MvcCaptcha("SampleCaptcha"); }
+                    @Html.Captcha(sampleCaptcha)
+                    @Html.TextBox("CaptchaCode")
+                </div>
+                <div>
+                    <!--<input type="submit" value="Create User" />-->
+                    <input type="submit" name="SUBMIT" value="Create User" onclick="this.value='Submitting ..';this.disabled='disabled'; this.form.submit();" />
+                </div>
+            </fieldset>
+        </div>
+                        }
+</center>

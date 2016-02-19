@@ -1,0 +1,31 @@
+﻿@model REST_magic1311.Models.UserModel
+@{
+    ViewBag.Title = "LogIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true, "Login failed, check your deteails!");
+        <div>
+            <fieldset>
+                <legend>Login</legend>
+                <div>@Html.LabelFor(u => u.Email)</div>
+                <div>
+                    @Html.TextBoxFor(u => u.Email)
+                    @Html.ValidationMessageFor(u => u.Email)
+                </div>
+
+                <div>@Html.LabelFor(u => u.Password)</div>
+                <div>
+                    @Html.PasswordFor(u => u.Password)
+                    @Html.ValidationMessageFor(u => u.Password)
+                </div>
+                <div>
+                    <input type="submit" name="SUBMIT" value="Log In" onclick="this.value='Submitting ..';this.disabled='disabled'; this.form.submit();" />
+                </div>
+            </fieldset>
+        </div>
+    }
+</center>

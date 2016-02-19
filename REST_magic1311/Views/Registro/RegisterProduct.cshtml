@@ -1,0 +1,116 @@
+﻿@model REST_magic1311.Models.SerialModel
+@{
+    List<SelectListItem> listItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+    {
+        Text = "ESP",
+        Value = "ESP"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "TRA",
+        Value = "TRA",
+        Selected = true
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "PET",
+        Value = "PET"
+    });
+}
+
+
+@{ 
+    ViewBag.Title = "Register new product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Request.IsAuthenticated)
+{
+    <div id="howToInstallApp">
+        <center>
+            <b>
+                <h4>Installation guide</h4>
+                <p>
+                    <i>-</i>Introduce the serial and product ID and send it!
+                    if everything was fine you will be redirected to a new page and just have to follow the next steps!
+                </p>
+                <p>
+                    <i>-</i> <i>FOR ONE TIME ONLY </i>After you register your product go to your cellphone and mark the option "Unknow sources" from the security settings
+                    on your phone
+                        <img src="~/Content/Images/unknow sources.png" />
+                </p>
+                <p>
+                    <i>-</i> Go to the download link of the app that you will get after the registration of your product and install the APK in your phone
+                </p>
+                <p>
+                    <i>-</i>Just introduce your already registered serial and you're ready to go!
+                </p>
+            </b>
+        </center>
+    </div>
+    using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true, "Registration failed.")
+        <div id="dg">
+            <div class="container">
+                <center>
+                    <div>
+                        <fieldset>
+                            <legend>Register new product</legend>
+                            <div>@Html.LabelFor(s => s.Serial)</div>
+                            <div>
+                                @Html.TextBoxFor(s => s.Serial)
+                                @Html.ValidationMessageFor(s => s.Serial)
+                            </div>
+
+                            <div>@Html.LabelFor(s => s.AppID)</div>
+                            <div>
+                                @Html.DropDownListFor(s => s.AppID, listItems)
+                                @Html.ValidationMessageFor(s => s.AppID)
+                            </div>
+                            <div>
+                                <input type="submit" name="SUBMIT" value="RegisterProduct" onclick="this.value='Submitting ..';this.disabled='disabled'; this.form.submit();" />
+                            </div>
+                        </fieldset>
+                    </div>
+                </center>
+            </div>
+        </div>
+    }
+    <!-- PORTFOLIO SECTION -->
+    <div id="dg">
+        <div class="container">
+            <div class="row centered">
+                <center>
+                    <center><h2><b>Our works</b></h2></center>
+                    <br>
+                    <div class="col-lg-4">
+                        <div class="tilt">
+                            <a href="#"><img src="~/Content/Images/esp_ch1.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="tilt">
+                            <a href="#"><img src="~/Content/Images/tra_ch2.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="tilt">
+                            <a href="#"><img src="~/Content/Images/pet_ch2.png" alt=""></a>
+                        </div>
+                    </div>
+                </center>
+            </div><!-- row -->
+        </div><!-- container -->
+    </div><!-- DG -->
+
+
+}
+else {
+        <h4> Usuario no registrado</h4>
+
+
+           <p> debes registrarte para poder registrar un producto</p>
+}

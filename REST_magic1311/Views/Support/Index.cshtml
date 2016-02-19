@@ -1,0 +1,69 @@
+﻿@model REST_magic1311.Models.MailModel
+@using BotDetect.Web.UI.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link href="@BotDetect.Web.CaptchaUrls.Absolute.LayoutStyleSheetUrl"
+          rel="stylesheet" type="text/css" />
+</head>
+@if (Request.IsAuthenticated)
+{
+    <div>
+        <center>
+            <p>
+                Here you send an email to the support from your account and you'll receive an answer in your current user mail!
+            </p>
+            <p>
+                You can send direct mail support if the current user mail is not your real mail to <a href="mailto:support@magic1311.com">support@magic1311.com</a> 
+            </p>
+        </center>
+    </div>
+    <center>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary(true, "Message failed, try again")
+            <div>
+                <fieldset>
+                    <legend>Send a support mail</legend>
+                    <div class="editor-label">
+                        @Html.LabelFor(u => u.Subject)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(u => u.Subject)
+                        @Html.ValidationMessageFor(u => u.Subject)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(u => u.Content)
+                    </div>
+                    <div class="editor-field">
+                        @Html.TextAreaFor(u => u.Content, new { @rows=15, @cols=60})
+                        @Html.ValidationMessageFor(u => u.Content)
+                    </div>
+                    <div>
+                        @{ MvcCaptcha sampleCaptcha = new MvcCaptcha("SampleCaptcha"); }
+                        @Html.Captcha(sampleCaptcha)
+                        @Html.TextBox("CaptchaCode")
+                    </div>
+                    <div>
+                        <!--<input type="submit" value="Create User" />-->
+                        <input type="submit" name="Send" value="Send Mail" onclick="this.value='Sending ..';this.disabled='disabled'; this.form.submit();" />
+                    </div>
+                </fieldset>
+            </div>
+        }
+    </center>
+}
+else
+{
+    <center>
+        <p>
+            You need to @Html.ActionLink("Login", "LogIn", "User") to use the support
+        </p>
+        <p>
+            You can send direct mail support if you don't have a user in the site to <a href="mailto:support@magic1311.com">support@magic1311.com</a>
+        </p>
+    </center>
+}

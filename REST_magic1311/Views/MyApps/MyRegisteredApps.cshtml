@@ -1,0 +1,123 @@
+﻿@using REST_magic1311.Models;
+@{
+
+    ViewBag.Title = "My Registered Apps";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@if (Request.IsAuthenticated)
+{
+
+    <center><h2>@User.Identity.Name 's Apps</h2></center>
+    if (ViewBag.Seriales.Count == 0)
+    {
+            <center>
+                <p>
+                    <b> You don't have registered products yet, go to @Html.ActionLink("REGISTER NEW PRODUCT", "RegisterProduct", "Registro") to register your product!</b>
+                    
+                </p>
+            </center>
+        }
+        else if (ViewBag.Seriales.Count != 0)
+        {
+            <center>
+                <p>
+                    Registered products: <b>@ViewBag.Seriales.Count</b>
+                </p>
+                
+                @foreach (SerialModel serial in ViewBag.Seriales)
+                {
+                    <div id="product">
+                        <p><b>Product name: </b> @serial.AppID </p>
+                        <p><b>Serial: </b> @serial.Serial </p>
+                        <p>
+                            <b>Used in app? </b>
+                            @if (serial.Usado == "True")
+                            {
+                                <i> Yes </i>
+                            }
+                            else
+                            {
+                                <i> No </i>
+                            }
+                        <p>
+                            @if (serial.AppID == "ESP")
+                            {
+                                <a href="~/MyApps/ESP/ESP11.apk" title="downloadESP" class="links" target="_blank">
+                                    <img alt="List View" src="@Url.Content("~/Content/Images/esp11.png")">
+                                    Download link
+                                </a>
+                                <p>
+                                    <a href="~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf" title="downloadESPManual" class="links" target="_blank">
+                                        <b>ESP MANUAL<i>(English/Spanish)</i></b>
+                                    </a>
+                                </p>
+                            }
+                            else if (serial.AppID == "TRA")
+                            {
+                                <a href="~/MyApps/TRA/TRAVEL11.apk" title="downloadTRA" class="links" target="_blank">
+                                    <img alt="List View" src="@Url.Content("~/Content/Images/TRA11.png")">
+                                    Download link
+                                </a>
+                                <p>
+                                    <a href="~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf" title="downloadESPManual" class="links" target="_blank">
+                                        <b>TRA MANUAL<i>(English/Spanish)</i></b>
+                                    </a>
+                                </p>
+                            }
+                            else if (serial.AppID == "PET")
+                            {
+                                <a href="~/MyApps/PET/PET11.apk" title="downloadPET" class="links" target="_blank">
+                                    <img alt="List View" src="@Url.Content("~/Content/Images/pet11.png")">
+                                    Download link
+                                </a>
+                                <p>
+                                    <a href="~/Files/Nuevos PDF 2/PET_span_ing2.pdf" title="downloadESPManual" class="links" target="_blank">
+                                        <b>PET MANUAL<i>(English/Spanish)</i></b>
+                                    </a>
+                                </p>
+                            }
+                        </p>
+                    </div>
+                    <div>
+                        <center>
+                            Remember to download your applications from your cellphone. It's easier!
+                        </center>
+                    </div>
+
+                }
+                <div>
+                    <center>
+                        <p>
+                            <b>HOW TO INSTALL VIDEO</b>
+                        </p>
+                        <p>
+                            <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/PkQc0UkkDoo" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </p>
+                    </center>
+                </div>
+                <div id="howToInstallApp">
+                    <center>
+                        <b>
+                            <h4>Installation guide</h4>
+                            <p>
+                                <i>-</i> <i>FOR ONE TIME ONLY </i>After you register your product go to your cellphone and mark the option "Unknow sources" from the security settings
+                                on your phone
+                                <img src="~/Content/Images/unknow sources.png" />
+                            </p>
+                            <p>
+                                <i>-</i> Go to the download link of the app that you will get after the registration of your product and install the APK in your phone
+                            </p>
+                            <p>
+                                <i>-</i>Just introduce your already registered serial and you're ready to go!
+                            </p>
+                        </b>
+                    </center>
+                </div>
+            </center>
+        }
+}
+else {
+    <b> Tiene que estar logeado para poder ingresar a esta página </b>
+}

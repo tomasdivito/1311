@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="shortcut icon" type="image/ico" href="~/Content/Images/favicon.ico">
+    <link href="~/Content/Site.css" rel="stylesheet"/>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <!--Fixed navbar-->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Magic1311", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        @Html.ActionLink("Support", "Index", "Support", new { area = "" }, new { @class = "navbar-brand" })
+                    </li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>
+                            @Html.ActionLink("My Apps", "MyRegisteredApps", "MyApps", new { area = "" }, new { @class = "navbar-brand" })
+                        </li>
+                        <li>
+                            @Html.ActionLink("Register new product", "RegisterProduct", "Registro", new { area = "" }, new { @class = "navbar-brand" })
+                        </li>
+                        <li>
+                            @Html.ActionLink(User.Identity.Name, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        </li>
+                        <li>
+                            @Html.ActionLink("Log Out", "LogOut", "User", new { area = "" }, new { @class = "navbar-brand" })
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            @Html.ActionLink("Register user", "Registration", "User", new { area = "" }, new { @class = "navbar-brand" })
+                        </li>
+                        <li>
+                            @Html.ActionLink("Log In with your user", "LogIn", "User", new { area = "" }, new { @class = "navbar-brand" })
+                        </li>
+                    }
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+    <!-- end -->
+    <center>
+        <div id="container">
+            <div class="row centered">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <center><img src="~/Content/Images/logo_ch.png" alt="" style="width:auto;height:auto;"></center>
+                </div>
+            </div><!-- row -->
+        </div><!-- container -->
+    </center>
+
+    <div class="container body-content">
+        <div id="renderBody">
+            @RenderBody()
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Magic1311 games and magic</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
