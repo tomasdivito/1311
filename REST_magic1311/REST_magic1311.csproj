@@ -239,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AndroidController.cs" />
     <Compile Include="Controllers\DownloadsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MyAppsController.cs" />
@@ -286,6 +287,8 @@
     <Content Include="Views\MyApps\MyRegisteredApps.cshtml" />
     <Content Include="Views\Support\Index.cshtml" />
     <Content Include="Views\Store\Buy.cshtml" />
+    <Content Include="Views\Android\Index.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

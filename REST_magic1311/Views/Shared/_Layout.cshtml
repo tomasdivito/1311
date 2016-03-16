@@ -12,51 +12,69 @@
 
 </head>
 <body>
-    <!--Fixed navbar-->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Magic1311", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        @Html.ActionLink("Support", "Index", "Support", new { area = "" }, new { @class = "navbar-brand" })
-                    </li>
-                    @if (Request.IsAuthenticated)
-                    {
-                        <li>
-                            @Html.ActionLink("My Apps", "MyRegisteredApps", "MyApps", new { area = "" }, new { @class = "navbar-brand" })
-                        </li>
-                        <li>
-                            @Html.ActionLink("Register new product", "RegisterProduct", "Registro", new { area = "" }, new { @class = "navbar-brand" })
-                        </li>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Magic1311", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    @Html.ActionLink("Support", "Index", "Support", new { area = "" }, new { @class = "navbar-brand" })
+                </li>
+                <li>
+                    @Html.ActionLink("Buy Apps", "Index", "Store", new { area = "" }, new { @class = "navbar-brand" })
+                </li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right">
+                @if (Request.IsAuthenticated)
+                {
                         <li>
                             @Html.ActionLink(User.Identity.Name, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                         </li>
                         <li>
                             @Html.ActionLink("Log Out", "LogOut", "User", new { area = "" }, new { @class = "navbar-brand" })
                         </li>
-                    }
-                    else
-                    {
+                }
+                else
+                {
+                    <li>
+                        @Html.ActionLink("Register user", "Registration", "User", new { area = "" }, new { @class = "navbar-brand" })
+                    </li>
+                    <li>
+                            @Html.ActionLink("Log In", "LogIn", "User", new { area = "" }, new { @class = "navbar-brand" })
+                    </li>
+                }
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Serial Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
                         <li>
-                            @Html.ActionLink("Register user", "Registration", "User", new { area = "" }, new { @class = "navbar-brand" })
+                            @Html.ActionLink("Register new product", "RegisterProduct", "Registro", new { area = "" }, new { @class = "navbar-brand" })
                         </li>
+                        <li class="divider"></li>
+                        <li><a href="#">Learn more about serial Productsk</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Google play<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
                         <li>
-                            @Html.ActionLink("Log In with your user", "LogIn", "User", new { area = "" }, new { @class = "navbar-brand" })
+                            @Html.ActionLink("So i bought an app from the Google play store...", "Index", "Android", new { area = "" }, new { @class = "navbar-brand" })
                         </li>
-                    }
-                </ul>
-            </div><!--/.nav-collapse -->
-        </div>
-    </div>
-    <!-- end -->
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+    
     <center>
         <div id="container">
             <div class="row centered">
