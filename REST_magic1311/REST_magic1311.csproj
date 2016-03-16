@@ -149,6 +149,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Font\SIL Open Font License.txt" />
+    <Content Include="Content\Images\Logos\Google-Play-Icon-2.png" />
     <Content Include="Content\Images\celu4.png" />
     <Content Include="Content\Images\esp11.png" />
     <Content Include="Content\Images\esp_ch1.png" />
@@ -224,6 +225,7 @@
     <Content Include="Files\Nuevos PDF 2\ESP_Ingles_Espa2.pdf" />
     <Content Include="Files\Nuevos PDF 2\PET_span_ing2.pdf" />
     <Content Include="Files\Nuevos PDF 2\TRAVEL_ing_esp2.pdf" />
+    <None Include="Properties\PublishProfiles\smarterasp.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -252,7 +254,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ActivationCodeModel.cs" />
-    <Compile Include="Models\CodeValidator.cs" />
     <Compile Include="Models\Db_Serial_Registrator.cs" />
     <Compile Include="Models\Db_User_Validator.cs" />
     <Compile Include="Models\Db_Validator.cs" />
@@ -298,6 +299,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Classes\" />
     <Folder Include="Views\Downloads\" />
     <Folder Include="Views\Validator\" />
   </ItemGroup>
