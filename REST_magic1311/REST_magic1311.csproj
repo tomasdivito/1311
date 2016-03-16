@@ -149,11 +149,13 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Font\SIL Open Font License.txt" />
+    <Content Include="Content\Images\Logos\esp_logo_store.jpg" />
     <Content Include="Content\Images\Logos\Google-Play-Icon-2.png" />
     <Content Include="Content\Images\celu4.png" />
     <Content Include="Content\Images\esp11.png" />
     <Content Include="Content\Images\esp_ch1.png" />
     <Content Include="Content\Images\esp_ch2.png" />
+    <Content Include="Content\Images\Logos\pet_logo_store.jpg" />
     <Content Include="Content\Images\logo_ch.png" />
     <Content Include="Content\Images\favicon.ico" />
     <Content Include="Content\Images\Logo_magic.png" />
@@ -169,6 +171,7 @@
     <Content Include="Content\Images\qrtraVIEJO.png" />
     <Content Include="Content\Images\TRA11.png" />
     <Content Include="Content\Images\tra4.png" />
+    <Content Include="Content\Images\Logos\travel_logo_store.jpg" />
     <Content Include="Content\Images\tra_ch2.png" />
     <Content Include="Content\Images\unknow sources.png" />
     <Content Include="Content\Site.css" />
