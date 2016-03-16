@@ -45,10 +45,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BotDetect">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Lanapsoft\BotDetect 3 CAPTCHA Component\Asp.Net\v4.5\BotDetect.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\dlls\BotDetect.dll</HintPath>
     </Reference>
     <Reference Include="BotDetect.Web.UI.Mvc">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Lanapsoft\BotDetect 3 CAPTCHA Component\Asp.Net\v4.5\BotDetect.Web.UI.Mvc.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\dlls\BotDetect.Web.UI.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
@@ -85,7 +85,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.8\Assemblies\v4.5\MySql.Data.dll</HintPath>
+      <HintPath>..\..\..\..\Documents\dlls\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="SimpleCrypto, Version=26.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleCrypto.0.3.30.26\lib\SimpleCrypto.dll</HintPath>
@@ -171,8 +171,8 @@
     <Content Include="Content\Images\tra_ch2.png" />
     <Content Include="Content\Images\unknow sources.png" />
     <Content Include="Content\Site.css" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Models\fonts\fontawesome-webfont.svg" />
+    <Content Include="Models\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="MyApps\ESP\esp.txt" />
     <Content Include="MyApps\PET\pet.txt" />
@@ -181,10 +181,10 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Models\fonts\fontawesome-webfont.eot" />
+    <Content Include="Models\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Models\fonts\fontawesome-webfont.woff" />
+    <Content Include="Models\fonts\FontAwesome.otf" />
     <Content Include="Assets\fonts\fontawesome-webfont.eot" />
     <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
     <Content Include="Assets\fonts\fontawesome-webfont.woff" />
@@ -270,9 +270,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Models\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Models\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Models\fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\hosting_magic1311.pubxml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
