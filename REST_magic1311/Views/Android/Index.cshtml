@@ -1,8 +1,28 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Android - Magic 1311";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<div class="container">
+    <center>
+        <div class="col-lg-4">
+            <div class="tilt">
+                <a href="#">
+                    <img src="~/Content/Images/Logos/Google-Play-Icon-2.png" /></a>
+            </div>
+        </div>
+        
+        <h2>Google Play Store Section</h2>
+        <p>
+            If you bought an app from the Google Play store you have to @Html.ActionLink("Register", "Registration", "User") to use your mail on the app that you purchased!
+
+            Once in the app you will have to put your registered email and then you will have access to the PDF Manuals of the software.
+        </p>
+        <p>
+            If you want to know more about or software in google play you can visit our <a href="https://play.google.com/store/apps/developer?id=GFA1311&hl=es_419">google play store
+            applications</a> or visit the @Html.ActionLink("store in the site", "Index", "Store") to buy an app from here using Paypal.
+        </p>
+    </center>
+</div>
 

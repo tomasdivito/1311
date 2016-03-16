@@ -38,7 +38,7 @@
                 @if (Request.IsAuthenticated)
                 {
                         <li>
-                            @Html.ActionLink(User.Identity.Name, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                            @Html.ActionLink(User.Identity.Name, "MyRegisteredApps", "MyApps", new { area = "" }, new { @class = "navbar-brand" })
                         </li>
                         <li>
                             @Html.ActionLink("Log Out", "LogOut", "User", new { area = "" }, new { @class = "navbar-brand" })
@@ -78,10 +78,13 @@
     <center>
         <div id="container">
             <div class="row centered">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <center><img src="~/Content/Images/logo_ch.png" alt="" style="width:auto;height:auto;"></center>
+
+                <div class="tilt">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <center><img src="~/Content/Images/logo_ch.png" alt="" style="width:auto;height:auto;"></center>
+                    </div>
                 </div>
-            </div><!-- row -->
+                </div><!-- row -->
         </div><!-- container -->
     </center>
 
