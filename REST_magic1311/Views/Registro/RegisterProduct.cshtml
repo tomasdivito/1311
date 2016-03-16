@@ -26,28 +26,7 @@
 }
 @if (Request.IsAuthenticated)
 {
-    <div id="howToInstallApp">
-        <center>
-            <b>
-                <h4>Installation guide</h4>
-                <p>
-                    <i>-</i>Introduce the serial and product ID and send it!
-                    if everything was fine you will be redirected to a new page and just have to follow the next steps!
-                </p>
-                <p>
-                    <i>-</i> <i>FOR ONE TIME ONLY </i>After you register your product go to your cellphone and mark the option "Unknow sources" from the security settings
-                    on your phone
-                        <img src="~/Content/Images/unknow sources.png" />
-                </p>
-                <p>
-                    <i>-</i> Go to the download link of the app that you will get after the registration of your product and install the APK in your phone
-                </p>
-                <p>
-                    <i>-</i>Just introduce your already registered serial and you're ready to go!
-                </p>
-            </b>
-        </center>
-    </div>
+    
     using (Html.BeginForm())
     {
         @Html.ValidationSummary(true, "Registration failed.")
@@ -76,6 +55,28 @@
                 </center>
             </div>
         </div>
+        <center>
+            <div id="product">
+                <b>
+                    <h4>Installation guide</h4>
+                    <p>
+                        <i>-</i>Introduce the serial and product ID and send it!
+                        if everything was fine you will be redirected to a new page and just have to follow the next steps!
+                    </p>
+                    <p>
+                        <i>-</i> <i>FOR ONE TIME ONLY </i>After you register your product go to your cellphone and mark the option "Unknow sources" from the security settings
+                        on your phone
+                        <img src="~/Content/Images/unknow sources.png" />
+                    </p>
+                    <p>
+                        <i>-</i> Go to the download link of the app that you will get after the registration of your product and install the APK in your phone
+                    </p>
+                    <p>
+                        <i>-</i>Just introduce your already registered serial and you're ready to go!
+                    </p>
+                </b>
+            </div>
+        </center>
     }
     <!-- PORTFOLIO SECTION -->
     <div id="dg">

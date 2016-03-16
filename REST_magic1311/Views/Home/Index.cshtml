@@ -47,57 +47,13 @@
         </div>
     </center>
 </div>-->
-
-<div id="index_explanation">
-    @if (Request.IsAuthenticated)
-    {
-        <center>
-            <h4>
-                Go to @Html.ActionLink("REGISTER PRODUCT", "RegisterProduct", "Registro") to register your product
-                and have full instructions on how to install the product!
-            </h4>
-            
-        </center>
-    }
-    else
-    {
-        <center>
-            <h4>
-                If you don't have an account you should @Html.ActionLink("REGISTER", "Registration", "User") or if you have
-                one you maybe need to @Html.ActionLink("LOGIN", "LogIn", "User") so you can start activating your purchases!
-            </h4>
-        </center>
-    }
-    
-    <div id="dg">
-        <div class="container">
-            <div class="row centered">
-                <center>
-                    <center><h2><b>Our works</b></h2></center>
-                    
-                    <br>
-                    <div class="col-lg-4">
-                        <div class="tilt">
-                            <a href="#"><img src="~/Content/Images/esp_ch1.png" alt=""></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="tilt">
-                            <a href="#"><img src="~/Content/Images/tra_ch2.png" alt=""></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4">
-                        <div class="tilt">
-                            <a href="#"><img src="~/Content/Images/pet_ch2.png" alt=""></a>
-                        </div>
-                    </div>
-                </center>
-            </div><!-- row -->
-        </div><!-- container -->
-    </div><!-- DG -->
+<div id="main_section_home">
+    <center>
+        <a href='@Url.Action("Index", "Store")'>
+            <img src="~/Content/Images/Logos/Products.png" />
+        </a>
+        <h2><b>You can now buy our products in the <a href="">Google Play Store</a></b> or on our @Html.ActionLink("store", "Index", "Store")</h2>
+    </center>
 </div>
-
 
 

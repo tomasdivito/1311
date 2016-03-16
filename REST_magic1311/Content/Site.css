@@ -27,6 +27,7 @@ a.ImageButtonLogo
 /* OVERALL ASPECT */
 
 body {
+    /*
   background-color: #0F546B;
     font-family: myFirstFont;
     font-weight: 300;
@@ -38,7 +39,7 @@ body {
     
     margin-top: 70px;
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 20px;*/
 }
 
 /* Titles */
@@ -70,6 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 .body-content {
     padding-left: 30px;
     padding-right: 30px;
+
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -95,16 +97,9 @@ p {
 }
 
 #container{
-    padding-top: 20px;
+
+    padding-top: 90px;
     padding-bottom: 10px;
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#02416e+0,000000+100&0.65+0,0+100 */
-    background: -moz-linear-gradient(top,  rgba(2,65,110,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(2,65,110,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(2,65,110,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a602416e', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-
-
 
 }
 
@@ -133,7 +128,19 @@ p {
     box-shadow: 10px 10px 25px 0px rgba(0,0,0,0.75);
 }
 
+#main_section_home{
+    padding-top: 20px;
+}
+
+#promo{
+    border-radius: 26px 26px 26px 26px;
+    -moz-border-radius: 26px 26px 26px 26px;
+    -webkit-border-radius: 26px 26px 26px 26px;
+    border: 2px solid #000000;
+}
+
 #product{
+    padding-top:20px;
     max-width: 500px;
     
     border-spacing: 50px;

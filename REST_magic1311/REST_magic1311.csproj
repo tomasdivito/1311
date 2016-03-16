@@ -156,6 +156,7 @@
     <Content Include="Content\Images\esp_ch1.png" />
     <Content Include="Content\Images\esp_ch2.png" />
     <Content Include="Content\Images\Logos\pet_logo_store.jpg" />
+    <Content Include="Content\Images\Logos\Products.png" />
     <Content Include="Content\Images\logo_ch.png" />
     <Content Include="Content\Images\favicon.ico" />
     <Content Include="Content\Images\Logo_magic.png" />

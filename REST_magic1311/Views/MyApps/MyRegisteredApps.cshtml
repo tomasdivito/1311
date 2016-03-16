@@ -12,10 +12,14 @@
     {
             <center>
                 <p>
-                    <b> You don't have registered products yet, go to @Html.ActionLink("REGISTER NEW PRODUCT", "RegisterProduct", "Registro") to register your product!</b>
-                    
+                    <b> No apps registered via serial</b>
                 </p>
             </center>
+
+            <b>
+                If you bought your app from the Google Play Store you have to reclaim your PDF manual in the @Html.ActionLink("Support", "Index", "Support") 
+            </b>
+            
         }
         else if (ViewBag.Seriales.Count != 0)
         {
