@@ -176,8 +176,6 @@
     <Content Include="Content\Images\tra_ch2.png" />
     <Content Include="Content\Images\unknow sources.png" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\fonts\fontawesome-webfont.svg" />
-    <Content Include="Models\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="MyApps\ESP\esp.txt" />
     <Content Include="MyApps\PET\pet.txt" />
@@ -186,10 +184,6 @@
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="Models\fonts\fontawesome-webfont.eot" />
-    <Content Include="Models\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Models\fonts\fontawesome-webfont.woff" />
-    <Content Include="Models\fonts\FontAwesome.otf" />
     <Content Include="Assets\fonts\fontawesome-webfont.eot" />
     <Content Include="Assets\fonts\fontawesome-webfont.ttf" />
     <Content Include="Assets\fonts\fontawesome-webfont.woff" />
@@ -259,6 +253,7 @@
     </Compile>
     <Compile Include="Models\ActivationCodeModel.cs" />
     <Compile Include="Models\Db_Serial_Registrator.cs" />
+    <Compile Include="Models\Db_SoftwareActivation.cs" />
     <Compile Include="Models\Db_User_Validator.cs" />
     <Compile Include="Models\Db_Validator.cs" />
     <Compile Include="Models\DownloadResult.cs" />
@@ -276,9 +271,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Models\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Models\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Models\fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\hosting_magic1311.pubxml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
