@@ -18,7 +18,7 @@ namespace REST_magic1311.Models
         {
             UserModel usr = new UserModel();
             usr.Email = email;
-
+            db_uv = new Db_User_Validator();
             if (db_uv.UserAlreadyCreated(usr))
             {
                 GetConnection();
@@ -99,12 +99,12 @@ namespace REST_magic1311.Models
                         return "Producto activado";
                     }
                     //Producto Activado con éxito
-                    return "Producto activado";
+                    return "Producto " + appID + "activado";
                 }
                 catch (InvalidOperationException e)
                 {
                     //ERROR MULTIPLES INTENTO DE CONEXION AL MISMO TIEMPO¿?
-                    return "Error";
+                    return "Error al activar " + "appID";
                 }
             }
             else
@@ -126,16 +126,13 @@ namespace REST_magic1311.Models
             try
             {
                 MySqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                while (reader.Read())
                 {
                     UserModel um = new UserModel();
                     string producto = Convert.ToString(reader.GetValue(0));
                     productosActivados.Add(producto);
                 }
-                else
-                {
                     reader.Close();
-                }
             }
             catch (InvalidOperationException e)
             {

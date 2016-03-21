@@ -15,6 +15,14 @@ namespace REST_magic1311.Controllers
             return View();
         }
 
+        public string Register(string email, string appID)
+        {
+            Db_SoftwareActivation dsa = new Db_SoftwareActivation();
+            string res;
+            res = dsa.ActivateSoftware(email, appID);
+            return res;
+        }
+
         public string Activate(string serial, string appID)
         {
             Db_Validator dv = new Db_Validator();
