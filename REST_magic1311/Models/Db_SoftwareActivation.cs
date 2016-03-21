@@ -51,10 +51,10 @@ namespace REST_magic1311.Models
                             mailSender = new MailSender();
                             MailModel mm = new MailModel();
                             mm.Subject = "JUEGO REGISTRADO (playstore)";
-                            mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + "App for free";
+                            mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + " App for free";
                             mailSender.SendMail(mm);
 
-                            return "Producto activado con promoción conseguida (ESP)";
+                            return "Producto activado";
                         }
                         else if(res == "TRA")
                         {
@@ -64,10 +64,10 @@ namespace REST_magic1311.Models
                             mailSender = new MailSender();
                             MailModel mm = new MailModel();
                             mm.Subject = "JUEGO REGISTRADO (playstore)";
-                            mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + "App for free";
+                            mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + " App for free";
                             mailSender.SendMail(mm);
 
-                            return "Producto activado con promoción conseguida (TRA)";
+                            return "Producto activado";
                         }
                         else if(res == "PET")
                         {
@@ -77,10 +77,10 @@ namespace REST_magic1311.Models
                             mailSender = new MailSender();
                             MailModel mm = new MailModel();
                             mm.Subject = "JUEGO REGISTRADO (playstore)";
-                            mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + "App for free";
+                            mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + " App for free";
                             mailSender.SendMail(mm);
 
-                            return "Producto activado con promoción conseguida (PET)";
+                            return "Producto activado";
                         }
                     }
                     else
@@ -99,12 +99,12 @@ namespace REST_magic1311.Models
                         return "Producto activado";
                     }
                     //Producto Activado con éxito
-                    return "Producto " + appID + "activado";
+                    return "Producto activado";
                 }
                 catch (InvalidOperationException e)
                 {
                     //ERROR MULTIPLES INTENTO DE CONEXION AL MISMO TIEMPO¿?
-                    return "Error al activar " + "appID";
+                    return "Error";
                 }
             }
             else
