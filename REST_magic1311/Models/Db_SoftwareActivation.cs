@@ -12,6 +12,7 @@ namespace REST_magic1311.Models
         bool connection_open;
         MySqlConnection connection;
         MailSender mailSender;
+        MailSender mailSender2;
         Db_User_Validator db_uv;
 
         public string ActivateSoftware(string email, string appID)
@@ -57,7 +58,7 @@ namespace REST_magic1311.Models
                             //--------------------------------------------------------------
                             //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
                             //--------------------------------------------------------------
-                            mailSender = new MailSender();
+                            mailSender2 = new MailSender();
                             MailModel mm2 = new MailModel();
 
                             mm2.Subject = "Product registered - MAGIC1311";
@@ -67,15 +68,15 @@ namespace REST_magic1311.Models
 
                             if (appID == "ESP")
                             {
-                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
                             }
                             else if (appID == "TRA")
                             {
-                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
                             }
                             else if (appID == "PET")
                             {
-                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
                             }
 
                             return "Producto activado";
@@ -94,7 +95,7 @@ namespace REST_magic1311.Models
                             //--------------------------------------------------------------
                             //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
                             //--------------------------------------------------------------
-                            mailSender = new MailSender();
+                            mailSender2 = new MailSender();
                             MailModel mm2 = new MailModel();
 
                             mm2.Subject = "Product registered - MAGIC1311";
@@ -104,15 +105,15 @@ namespace REST_magic1311.Models
 
                             if (appID == "ESP")
                             {
-                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
                             }
                             else if (appID == "TRA")
                             {
-                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
                             }
                             else if (appID == "PET")
                             {
-                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
                             }
 
                             return "Producto activado";
@@ -131,7 +132,7 @@ namespace REST_magic1311.Models
                             //--------------------------------------------------------------
                             //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
                             //--------------------------------------------------------------
-                            mailSender = new MailSender();
+                            mailSender2 = new MailSender();
                             MailModel mm2 = new MailModel();
 
                             mm2.Subject = "Product registered - MAGIC1311";
@@ -141,15 +142,15 @@ namespace REST_magic1311.Models
 
                             if (appID == "ESP")
                             {
-                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
                             }
                             else if (appID == "TRA")
                             {
-                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
                             }
                             else if (appID == "PET")
                             {
-                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
                             }
 
                             return "Producto activado";
@@ -170,7 +171,7 @@ namespace REST_magic1311.Models
                         //--------------------------------------------------------------
                         //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
                         //--------------------------------------------------------------
-                        mailSender = new MailSender();
+                        mailSender2 = new MailSender();
                         MailModel mm2 = new MailModel();
 
                         mm2.Subject = "Product registered - MAGIC1311";
@@ -180,15 +181,15 @@ namespace REST_magic1311.Models
 
                         if (appID == "ESP")
                         {
-                            mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
+                            mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
                         }
                         else if (appID == "TRA")
                         {
-                            mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
+                            mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
                         }
                         else if (appID == "PET")
                         {
-                            mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                            mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
                         }
 
                         //Producto Activado con éxito pero no tuvo promoción

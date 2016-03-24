@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
 using System.Web;
+using System.Web.Mvc;
 
 namespace REST_magic1311.Models
 {
@@ -21,7 +22,6 @@ namespace REST_magic1311.Models
                 client.Credentials = new System.Net.NetworkCredential("mailsender@magic1311.com", "m@ils3nd3r");
                 ml.Subject = mail.Subject;
                 ml.Body = mail.Content;
-                ml.Attachments.Add(new Attachment("~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf"));
                 client.Send(ml);
             }
             catch (Exception ex)
@@ -42,7 +42,8 @@ namespace REST_magic1311.Models
                 client.Credentials = new System.Net.NetworkCredential("mailsender@magic1311.com", "m@ils3nd3r");
                 ml.Subject = mail.Subject;
                 ml.Body = mail.Content;
-                ml.Attachments.Add(new Attachment(attach));
+                string filePath = HttpContext.Current.Server.MapPath(attach);
+                ml.Attachments.Add(new Attachment(filePath));
                 client.Send(ml);
             }
             catch (Exception ex)
