@@ -15,6 +15,17 @@ namespace REST_magic1311.Controllers
             return View();
         }
 
+        public string CheckBlackList(string email)
+        {
+            Db_User_Validator duv = new Db_User_Validator();
+            if (duv.UserBlackList(new UserModel { Email = email }))
+            {
+                return "Lista negra";
+            }
+            else
+                return null;
+        }
+
         public string Register(string email, string appID)
         {
             Db_SoftwareActivation dsa = new Db_SoftwareActivation();
