@@ -117,7 +117,7 @@ namespace REST_magic1311.Models
                 MailModel mm = new MailModel();
                 mm.Subject = "NEW SERIAL REGISTERED";
                 mm.Content = "The user " + user + " activated the serial " + serial;
-                mailSender.SendMail(mm);
+                mailSender.SendMail(mm, "tomasdv2@gmail.com");
             }
             catch (InvalidOperationException e)
             {
@@ -225,7 +225,7 @@ namespace REST_magic1311.Models
                 MailModel mm = new MailModel();
                 mm.Subject = "NEW SERIAL USED IN APPLICATION";
                 mm.Content = "The serial: " + serial + " was used on an application successfully";
-                mailSender.SendMail(mm);
+                mailSender.SendMail(mm, "tomasdv2@gmail.com");
             }
             catch (InvalidOperationException e)
             {

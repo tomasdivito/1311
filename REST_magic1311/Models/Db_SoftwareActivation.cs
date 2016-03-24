@@ -52,9 +52,33 @@ namespace REST_magic1311.Models
                             MailModel mm = new MailModel();
                             mm.Subject = "JUEGO REGISTRADO (playstore)";
                             mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + "App for free";
-                            mailSender.SendMail(mm);
+                            mailSender.SendMail(mm, "tomasdv2@gmail.com");
 
-                            return "Producto activado con promoción conseguida (ESP)";
+                            //--------------------------------------------------------------
+                            //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
+                            //--------------------------------------------------------------
+                            mailSender = new MailSender();
+                            MailModel mm2 = new MailModel();
+
+                            mm2.Subject = "Product registered - MAGIC1311";
+
+                            mm2.Content = "Thank you for your purchase, " + email + " your product " + appID +
+                                " was successfully registered, remember to visit http://magic1311.com for more news about our products!\n (We attached the software manual to this mail)\n-MAGIC1311";
+
+                            if (appID == "ESP")
+                            {
+                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
+                            }
+                            else if (appID == "TRA")
+                            {
+                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
+                            }
+                            else if (appID == "PET")
+                            {
+                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                            }
+
+                            return "Producto activado";
                         }
                         else if(res == "TRA")
                         {
@@ -65,9 +89,33 @@ namespace REST_magic1311.Models
                             MailModel mm = new MailModel();
                             mm.Subject = "JUEGO REGISTRADO (playstore)";
                             mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + "App for free";
-                            mailSender.SendMail(mm);
+                            mailSender.SendMail(mm, "tomasdv2@gmail.com");
 
-                            return "Producto activado con promoción conseguida (TRA)";
+                            //--------------------------------------------------------------
+                            //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
+                            //--------------------------------------------------------------
+                            mailSender = new MailSender();
+                            MailModel mm2 = new MailModel();
+
+                            mm2.Subject = "Product registered - MAGIC1311";
+
+                            mm2.Content = "Thank you for your purchase, " + email + " your product " + appID +
+                                " was successfully registered, remember to visit http://magic1311.com for more news about our products!\n (We attached the software manual to this mail)\n-MAGIC1311";
+
+                            if (appID == "ESP")
+                            {
+                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
+                            }
+                            else if (appID == "TRA")
+                            {
+                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
+                            }
+                            else if (appID == "PET")
+                            {
+                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                            }
+
+                            return "Producto activado";
                         }
                         else if(res == "PET")
                         {
@@ -78,9 +126,33 @@ namespace REST_magic1311.Models
                             MailModel mm = new MailModel();
                             mm.Subject = "JUEGO REGISTRADO (playstore)";
                             mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + "App for free";
-                            mailSender.SendMail(mm);
+                            mailSender.SendMail(mm, "tomasdv2@gmail.com");
 
-                            return "Producto activado con promoción conseguida (PET)";
+                            //--------------------------------------------------------------
+                            //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
+                            //--------------------------------------------------------------
+                            mailSender = new MailSender();
+                            MailModel mm2 = new MailModel();
+
+                            mm2.Subject = "Product registered - MAGIC1311";
+
+                            mm2.Content = "Thank you for your purchase, " + email + " your product " + appID +
+                                " was successfully registered, remember to visit http://magic1311.com for more news about our products!\n (We attached the software manual to this mail)\n-MAGIC1311";
+
+                            if (appID == "ESP")
+                            {
+                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
+                            }
+                            else if (appID == "TRA")
+                            {
+                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
+                            }
+                            else if (appID == "PET")
+                            {
+                                mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                            }
+
+                            return "Producto activado";
                         }
                     }
                     else
@@ -93,13 +165,37 @@ namespace REST_magic1311.Models
                         MailModel mm = new MailModel();
                         mm.Subject = "JUEGO REGISTRADO (playstore)";
                         mm.Content = "The user " + email + " registered a software " + appID;
-                        mailSender.SendMail(mm);
+                        mailSender.SendMail(mm, "tomasdv2@gmail.com");
+
+                        //--------------------------------------------------------------
+                        //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
+                        //--------------------------------------------------------------
+                        mailSender = new MailSender();
+                        MailModel mm2 = new MailModel();
+
+                        mm2.Subject = "Product registered - MAGIC1311";
+
+                        mm2.Content = "Thank you for your purchase, " + email + " your product " + appID + 
+                            " was successfully registered, remember to visit http://magic1311.com for more news about our products!\n (We attached the software manual to this mail)\n-MAGIC1311";
+
+                        if (appID == "ESP")
+                        {
+                            mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
+                        }
+                        else if (appID == "TRA")
+                        {
+                            mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
+                        }
+                        else if (appID == "PET")
+                        {
+                            mailSender.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                        }
 
                         //Producto Activado con éxito pero no tuvo promoción
                         return "Producto activado";
                     }
                     //Producto Activado con éxito
-                    return "Producto " + appID + "activado";
+                    return "Producto activado";
                 }
                 catch (InvalidOperationException e)
                 {
