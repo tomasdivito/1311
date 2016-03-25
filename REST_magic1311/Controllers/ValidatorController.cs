@@ -22,8 +22,14 @@ namespace REST_magic1311.Controllers
             {
                 return "Lista negra";
             }
+            else if (duv.UserWhiteList(new UserModel { Email = email }))
+            {
+                return "Lista blanca";
+            }
             else
+            {
                 return null;
+            }
         }
 
         public string Register(string email, string appID)

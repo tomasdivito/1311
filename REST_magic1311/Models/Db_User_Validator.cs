@@ -159,6 +159,40 @@ namespace REST_magic1311.Models
             }
         }
 
+        public bool UserWhiteList(UserModel usr)
+        {
+            List<string> emailsInWhiteList = new List<string>();
+            GetConnection();
+            string commandText = "SELECT * FROM `users` WHERE `Blacklist` = 0";
+
+            MySqlCommand cmd = new MySqlCommand(commandText, connection);
+
+            try
+            {
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    UserModel um = new UserModel();
+
+                    string email = Convert.ToString(reader.GetValue(0));
+                    emailsInWhiteList.Add(email);
+                }
+                if (emailsInWhiteList.Contains(usr.Email))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (InvalidOperationException e)
+            {
+                //ERROR MULTIPLES INTENTO DE CONEXION AL MISMO TIEMPO¿?
+                return false;
+            }
+        }
+
         public void GetConnection()
         {
             connection_open = false;
