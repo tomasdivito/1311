@@ -68,17 +68,17 @@ namespace REST_magic1311.Models
                                 mm2.Content = "Thank you for your purchase, " + email + " your product " + appID +
                                     " was successfully registered, remember to visit http://magic1311.com for more news about our products!\n (We attached the software manual to this mail)\n-MAGIC1311";
 
-                                if (appID == "ESP")
+                                if (appID == "ESP" || appID== "ESPF")
                                 {
                                     mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
                                 }
-                                else if (appID == "TRA")
-                                {
-                                    mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
-                                }
-                                else if (appID == "PET")
+                                else if (appID == "TRA" || appID == "TRAF")
                                 {
                                     mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                                }
+                                else if (appID == "PET" || appID == "PETF")
+                                {
+                                    mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
                                 }
 
                                 return "Producto activado";
@@ -105,17 +105,17 @@ namespace REST_magic1311.Models
                                 mm2.Content = "Thank you for your purchase, " + email + " your product " + appID +
                                     " was successfully registered, remember to visit http://magic1311.com for more news about our products!\n (We attached the software manual to this mail)\n-MAGIC1311";
 
-                                if (appID == "ESP")
+                                if (appID == "ESP" || appID == "ESPF")
                                 {
                                     mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
                                 }
-                                else if (appID == "TRA")
-                                {
-                                    mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
-                                }
-                                else if (appID == "PET")
+                                else if (appID == "TRA" || appID == "TRAF")
                                 {
                                     mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                                }
+                                else if (appID == "PET" || appID == "PETF")
+                                {
+                                    mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
                                 }
 
                                 return "Producto activado";
@@ -142,17 +142,17 @@ namespace REST_magic1311.Models
                                 mm2.Content = "Thank you for your purchase, " + email + " your product " + appID +
                                     " was successfully registered, remember to visit http://magic1311.com for more news about our products!\n (We attached the software manual to this mail)\n-MAGIC1311";
 
-                                if (appID == "ESP")
+                                if (appID == "ESP" || appID == "ESPF")
                                 {
                                     mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
                                 }
-                                else if (appID == "TRA")
-                                {
-                                    mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
-                                }
-                                else if (appID == "PET")
+                                else if (appID == "TRA" || appID == "TRAF")
                                 {
                                     mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                                }
+                                else if (appID == "PET" || appID == "PETF")
+                                {
+                                    mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
                                 }
 
                                 return "Producto activado";
@@ -181,15 +181,15 @@ namespace REST_magic1311.Models
                             mm2.Content = "Thank you for your purchase, " + email + " your product " + appID +
                                 " was successfully registered, remember to visit http://magic1311.com for more news about our products!\n (We attached the software manual to this mail)\n-MAGIC1311";
 
-                            if (appID == "ESP")
+                            if (appID == "ESP" || appID == "ESPF")
                             {
                                 mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/ESP_Ingles_Espa2.pdf");
                             }
-                            else if (appID == "TRA")
+                            else if (appID == "TRA" || appID == "TRAF")
                             {
                                 mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
                             }
-                            else if (appID == "PET")
+                            else if (appID == "PET" || appID == "PETF")
                             {
                                 mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
                             }
