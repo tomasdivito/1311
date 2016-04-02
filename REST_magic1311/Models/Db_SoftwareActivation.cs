@@ -187,11 +187,11 @@ namespace REST_magic1311.Models
                             }
                             else if (appID == "TRA")
                             {
-                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
                             }
                             else if (appID == "PET")
                             {
-                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TRAVEL_ing_esp2.pdf");
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
                             }
 
                             //Producto Activado con éxito pero no tuvo promoción
