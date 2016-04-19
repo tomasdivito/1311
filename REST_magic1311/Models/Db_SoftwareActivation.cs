@@ -193,6 +193,18 @@ namespace REST_magic1311.Models
                             {
                                 mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/PET_span_ing2.pdf");
                             }
+                            else if (appID == "TELEPATIC")
+                            {
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TelepatiCard.pdf");
+                            }
+                            else if (appID == "TELEPATIC")
+                            {
+                                mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/Revealed Pro.pdf");
+                            }
+                            else
+                            {
+                                mailSender2.SendMail(mm2, email);
+                            }
 
                             //Producto Activado con éxito pero no tuvo promoción
                             return "Producto activado";
