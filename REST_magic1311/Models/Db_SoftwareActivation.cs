@@ -197,7 +197,7 @@ namespace REST_magic1311.Models
                             {
                                 mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/TelepatiCard.pdf");
                             }
-                            else if (appID == "CARDREVELEAD")
+                            else if (appID == "CardRevelead")
                             {
                                 mailSender2.SendMail(mm2, email, "~/Files/Nuevos PDF 2/Revealed Pro.pdf");
                             }
