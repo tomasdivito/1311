@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using REST_magic1311.Source;
+using REST_magic1311.Models;
 
 namespace REST_magic1311.Controllers
 {
@@ -15,7 +16,7 @@ namespace REST_magic1311.Controllers
             return View();
         }
 
-        public string GetGameByID(string ID)
+        public string GetGameByID(string ID, string maxQuantity)
         {
             return "";
         }

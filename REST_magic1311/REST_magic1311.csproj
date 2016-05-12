@@ -170,6 +170,9 @@
     <Content Include="Content\Images\qrespVIEJO.png" />
     <Content Include="Content\Images\qrpetVIEJO.png" />
     <Content Include="Content\Images\qrtraVIEJO.png" />
+    <Content Include="Content\Images\store_petDEMO.jpg" />
+    <Content Include="Content\Images\store_revealed.jpg" />
+    <Content Include="Content\Images\store_telepatic.jpg" />
     <Content Include="Content\Images\TRA11.png" />
     <Content Include="Content\Images\tra4.png" />
     <Content Include="Content\Images\Logos\travel_logo_store.jpg" />
