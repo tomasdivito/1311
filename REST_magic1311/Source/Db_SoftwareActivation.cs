@@ -55,7 +55,7 @@ namespace REST_magic1311.Models
                                 MailModel mm = new MailModel();
                                 mm.Subject = "JUEGO REGISTRADO (playstore)";
                                 mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + "App for free";
-                                mailSender.SendMail(mm, "tomasdv2@gmail.com");
+                                mailSender.SendMail(mm, "tovidi@gmail.com");
 
                                 //--------------------------------------------------------------
                                 //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
@@ -92,7 +92,7 @@ namespace REST_magic1311.Models
                                 MailModel mm = new MailModel();
                                 mm.Subject = "JUEGO REGISTRADO (playstore)";
                                 mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + "App for free";
-                                mailSender.SendMail(mm, "tomasdv2@gmail.com");
+                                mailSender.SendMail(mm, "tovidi@gmail.com");
 
                                 //--------------------------------------------------------------
                                 //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
@@ -129,7 +129,7 @@ namespace REST_magic1311.Models
                                 MailModel mm = new MailModel();
                                 mm.Subject = "JUEGO REGISTRADO (playstore)";
                                 mm.Content = "The user " + email + " registered a software " + appID + " and should receive a " + res + "App for free";
-                                mailSender.SendMail(mm, "tomasdv2@gmail.com");
+                                mailSender.SendMail(mm, "tovidi@gmail.com");
 
                                 //--------------------------------------------------------------
                                 //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
@@ -168,7 +168,7 @@ namespace REST_magic1311.Models
                             MailModel mm = new MailModel();
                             mm.Subject = "JUEGO REGISTRADO (playstore)";
                             mm.Content = "The user " + email + " registered a software " + appID;
-                            mailSender.SendMail(mm, "tomasdv2@gmail.com");
+                            mailSender.SendMail(mm, "tovidi@gmail.com");
 
                             //--------------------------------------------------------------
                             //HERE METHOD TO SEND MAIL TO THE BUYER WHEN SOMEBODY REGISTER A PRODUCT
