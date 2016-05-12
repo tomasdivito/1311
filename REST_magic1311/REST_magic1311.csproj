@@ -226,6 +226,8 @@
     <Content Include="Files\Nuevos PDF 2\ESP_Ingles_Espa2.pdf" />
     <Content Include="Files\Nuevos PDF 2\PET_span_ing2.pdf" />
     <Content Include="Files\Nuevos PDF 2\TRAVEL_ing_esp2.pdf" />
+    <Content Include="Files\Nuevos PDF 2\Revealed Pro.pdf" />
+    <Content Include="Files\Nuevos PDF 2\TelepatiCard.pdf" />
     <None Include="Properties\PublishProfiles\smarterasp.pubxml" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />

@@ -114,7 +114,7 @@ namespace REST_magic1311.Models
                     MailModel mm = new MailModel();
                     mm.Subject = "NEW USER REGISTERED";
                     mm.Content = "The user " + user.Email + " has been registered on the site";
-                    mailSender.SendMail(mm, "tomasdv2@gmail.com");
+                    mailSender.SendMail(mm, "tovidi@gmail.com");
                 }
                 catch (InvalidOperationException e)
                 {
